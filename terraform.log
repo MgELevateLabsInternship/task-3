@@ -1,0 +1,1344 @@
+2025-08-07T07:57:26.583Z [INFO]  Terraform version: 1.12.2
+2025-08-07T07:57:26.583Z [DEBUG] using github.com/hashicorp/go-tfe v1.74.1
+2025-08-07T07:57:26.583Z [DEBUG] using github.com/hashicorp/hcl/v2 v2.23.1-0.20250203194505-ba0759438da2
+2025-08-07T07:57:26.583Z [DEBUG] using github.com/hashicorp/terraform-svchost v0.1.1
+2025-08-07T07:57:26.583Z [DEBUG] using github.com/zclconf/go-cty v1.16.2
+2025-08-07T07:57:26.583Z [INFO]  Go runtime version: go1.24.2
+2025-08-07T07:57:26.583Z [INFO]  CLI args: []string{"terraform", "apply"}
+2025-08-07T07:57:26.583Z [DEBUG] Attempting to open CLI config file: /root/.terraformrc
+2025-08-07T07:57:26.583Z [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2025-08-07T07:57:26.583Z [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2025-08-07T07:57:26.583Z [DEBUG] ignoring non-existing provider search directory /root/.terraform.d/plugins
+2025-08-07T07:57:26.583Z [DEBUG] ignoring non-existing provider search directory /root/.local/share/terraform/plugins
+2025-08-07T07:57:26.583Z [DEBUG] ignoring non-existing provider search directory /usr/local/share/terraform/plugins
+2025-08-07T07:57:26.583Z [DEBUG] ignoring non-existing provider search directory /usr/share/terraform/plugins
+2025-08-07T07:57:26.583Z [DEBUG] ignoring non-existing provider search directory /var/lib/snapd/desktop/terraform/plugins
+2025-08-07T07:57:26.583Z [INFO]  CLI command args: []string{"apply"}
+2025-08-07T07:57:26.656Z [DEBUG] checking for provisioner in "."
+2025-08-07T07:57:26.659Z [DEBUG] checking for provisioner in "/usr/bin"
+2025-08-07T07:57:26.660Z [INFO]  backend/local: starting Apply operation
+2025-08-07T07:57:26.661Z [DEBUG] created provider logger: level=debug
+2025-08-07T07:57:26.661Z [INFO]  provider: configuring client automatic mTLS
+2025-08-07T07:57:26.679Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/kreuzwerker/docker/3.0.2/linux_amd64/terraform-provider-docker_v3.0.2 args=[".terraform/providers/registry.terraform.io/kreuzwerker/docker/3.0.2/linux_amd64/terraform-provider-docker_v3.0.2"]
+2025-08-07T07:57:26.681Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/kreuzwerker/docker/3.0.2/linux_amd64/terraform-provider-docker_v3.0.2 pid=3999
+2025-08-07T07:57:26.681Z [DEBUG] provider: waiting for RPC address: plugin=.terraform/providers/registry.terraform.io/kreuzwerker/docker/3.0.2/linux_amd64/terraform-provider-docker_v3.0.2
+2025-08-07T07:57:26.695Z [INFO]  provider.terraform-provider-docker_v3.0.2: configuring server automatic mTLS: timestamp=2025-08-07T07:57:26.694Z
+2025-08-07T07:57:26.717Z [DEBUG] provider.terraform-provider-docker_v3.0.2: plugin address: address=/tmp/plugin3455568364 network=unix timestamp=2025-08-07T07:57:26.717Z
+2025-08-07T07:57:26.717Z [DEBUG] provider: using plugin: version=5
+2025-08-07T07:57:26.744Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2025-08-07T07:57:26.745Z [INFO]  provider: plugin process exited: plugin=.terraform/providers/registry.terraform.io/kreuzwerker/docker/3.0.2/linux_amd64/terraform-provider-docker_v3.0.2 id=3999
+2025-08-07T07:57:26.745Z [DEBUG] provider: plugin exited
+2025-08-07T07:57:26.745Z [DEBUG] Building and walking validate graph
+2025-08-07T07:57:26.745Z [DEBUG] ProviderTransformer: "docker_container.nginx_container" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/kreuzwerker/docker"]
+2025-08-07T07:57:26.745Z [DEBUG] ProviderTransformer: "docker_image.nginx" (*terraform.NodeValidatableResource) needs provider["registry.terraform.io/kreuzwerker/docker"]
+2025-08-07T07:57:26.746Z [DEBUG] ReferenceTransformer: "docker_image.nginx" references: []
+2025-08-07T07:57:26.746Z [DEBUG] ReferenceTransformer: "docker_container.nginx_container" references: [docker_image.nginx]
+2025-08-07T07:57:26.746Z [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/kreuzwerker/docker\"]" references: []
+2025-08-07T07:57:26.746Z [DEBUG] Starting graph walk: walkValidate
+2025-08-07T07:57:26.746Z [DEBUG] created provider logger: level=debug
+2025-08-07T07:57:26.746Z [INFO]  provider: configuring client automatic mTLS
+2025-08-07T07:57:26.752Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/kreuzwerker/docker/3.0.2/linux_amd64/terraform-provider-docker_v3.0.2 args=[".terraform/providers/registry.terraform.io/kreuzwerker/docker/3.0.2/linux_amd64/terraform-provider-docker_v3.0.2"]
+2025-08-07T07:57:26.752Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/kreuzwerker/docker/3.0.2/linux_amd64/terraform-provider-docker_v3.0.2 pid=4005
+2025-08-07T07:57:26.752Z [DEBUG] provider: waiting for RPC address: plugin=.terraform/providers/registry.terraform.io/kreuzwerker/docker/3.0.2/linux_amd64/terraform-provider-docker_v3.0.2
+2025-08-07T07:57:26.766Z [INFO]  provider.terraform-provider-docker_v3.0.2: configuring server automatic mTLS: timestamp=2025-08-07T07:57:26.765Z
+2025-08-07T07:57:26.789Z [DEBUG] provider: using plugin: version=5
+2025-08-07T07:57:26.789Z [DEBUG] provider.terraform-provider-docker_v3.0.2: plugin address: address=/tmp/plugin4036259073 network=unix timestamp=2025-08-07T07:57:26.788Z
+2025-08-07T07:57:26.823Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2025-08-07T07:57:26.824Z [INFO]  provider: plugin process exited: plugin=.terraform/providers/registry.terraform.io/kreuzwerker/docker/3.0.2/linux_amd64/terraform-provider-docker_v3.0.2 id=4005
+2025-08-07T07:57:26.824Z [DEBUG] provider: plugin exited
+2025-08-07T07:57:26.824Z [INFO]  backend/local: apply calling Plan
+2025-08-07T07:57:26.824Z [DEBUG] Building and walking plan graph for NormalMode
+2025-08-07T07:57:26.825Z [DEBUG] ProviderTransformer: "docker_image.nginx (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/kreuzwerker/docker"]
+2025-08-07T07:57:26.825Z [DEBUG] ProviderTransformer: "docker_container.nginx_container (expand)" (*terraform.nodeExpandPlannableResource) needs provider["registry.terraform.io/kreuzwerker/docker"]
+2025-08-07T07:57:26.826Z [DEBUG] ReferenceTransformer: "docker_image.nginx (expand)" references: []
+2025-08-07T07:57:26.826Z [DEBUG] ReferenceTransformer: "docker_container.nginx_container (expand)" references: [docker_image.nginx (expand)]
+2025-08-07T07:57:26.826Z [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/kreuzwerker/docker\"]" references: []
+2025-08-07T07:57:26.827Z [DEBUG] Starting graph walk: walkPlan
+2025-08-07T07:57:26.828Z [DEBUG] created provider logger: level=debug
+2025-08-07T07:57:26.828Z [INFO]  provider: configuring client automatic mTLS
+2025-08-07T07:57:26.836Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/kreuzwerker/docker/3.0.2/linux_amd64/terraform-provider-docker_v3.0.2 args=[".terraform/providers/registry.terraform.io/kreuzwerker/docker/3.0.2/linux_amd64/terraform-provider-docker_v3.0.2"]
+2025-08-07T07:57:26.837Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/kreuzwerker/docker/3.0.2/linux_amd64/terraform-provider-docker_v3.0.2 pid=4010
+2025-08-07T07:57:26.837Z [DEBUG] provider: waiting for RPC address: plugin=.terraform/providers/registry.terraform.io/kreuzwerker/docker/3.0.2/linux_amd64/terraform-provider-docker_v3.0.2
+2025-08-07T07:57:26.848Z [INFO]  provider.terraform-provider-docker_v3.0.2: configuring server automatic mTLS: timestamp=2025-08-07T07:57:26.847Z
+2025-08-07T07:57:26.871Z [DEBUG] provider: using plugin: version=5
+2025-08-07T07:57:26.871Z [DEBUG] provider.terraform-provider-docker_v3.0.2: plugin address: address=/tmp/plugin3184767661 network=unix timestamp=2025-08-07T07:57:26.870Z
+2025-08-07T07:57:26.898Z [WARN]  ValidateProviderConfig from "provider[\"registry.terraform.io/kreuzwerker/docker\"]" changed the config value, but that value is unused
+2025-08-07T07:57:26.899Z [DEBUG] ReferenceTransformer: "docker_image.nginx" references: []
+2025-08-07T07:57:26.904Z [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/08/07 07:57:26 [DEBUG] local images data: sha256:2cd1d: timestamp=2025-08-07T07:57:26.904Z
+2025-08-07T07:57:26.904Z [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/08/07 07:57:26 [DEBUG] local images data: sha256:2cd1d97f893f70cee86a38b7160c30e5750f3ed6ad86c598884ca9c6a563a501: timestamp=2025-08-07T07:57:26.904Z
+2025-08-07T07:57:26.904Z [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/08/07 07:57:26 [DEBUG] local images data: nginx:latest: timestamp=2025-08-07T07:57:26.904Z
+2025-08-07T07:57:26.904Z [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/08/07 07:57:26 [DEBUG] local images data: nginx@sha256:84ec966e61a8c7846f509da7eb081c55c1d56817448728924a87ab32f12a72fb: timestamp=2025-08-07T07:57:26.904Z
+2025-08-07T07:57:26.907Z [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/08/07 07:57:26 [DEBUG] Docker image inspect from readFunc: {
+	"Id": "sha256:2cd1d97f893f70cee86a38b7160c30e5750f3ed6ad86c598884ca9c6a563a501",
+	"RepoTags": [
+		"nginx:latest"
+	],
+	"RepoDigests": [
+		"nginx@sha256:84ec966e61a8c7846f509da7eb081c55c1d56817448728924a87ab32f12a72fb"
+	],
+	"Parent": "",
+	"Comment": "buildkit.dockerfile.v0",
+	"Created": "2025-07-14T22:07:26Z",
+	"Container": "",
+	"ContainerConfig": {
+		"Hostname": "",
+		"Domainname": "",
+		"User": "",
+		"AttachStdin": false,
+		"AttachStdout": false,
+		"AttachStderr": false,
+		"Tty": false,
+		"OpenStdin": false,
+		"StdinOnce": false,
+		"Env": null,
+		"Cmd": null,
+		"Image": "",
+		"Volumes": null,
+		"WorkingDir": "",
+		"Entrypoint": null,
+		"OnBuild": null,
+		"Labels": null
+	},
+	"DockerVersion": "",
+	"Author": "",
+	"Config": {
+		"Hostname": "",
+		"Domainname": "",
+		"User": "",
+		"AttachStdin": false,
+		"AttachStdout": false,
+		"AttachStderr": false,
+		"ExposedPorts": {
+			"80/tcp": {}
+		},
+		"Tty": false,
+		"OpenStdin": false,
+		"StdinOnce": false,
+		"Env": [
+			"PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+			"NGINX_VERSION=1.29.0",
+			"NJS_VERSION=0.9.0",
+			"NJS_RELEASE=1~bookworm",
+			"PKG_RELEASE=1~bookworm",
+			"DYNPKG_RELEASE=1~bookworm"
+		],
+		"Cmd": [
+			"nginx",
+			"-g",
+			"daemon off;"
+		],
+		"Image": "",
+		"Volumes": null,
+		"WorkingDir": "",
+		"Entrypoint": [
+			"/docker-entrypoint.sh"
+		],
+		"OnBuild": null,
+		"Labels": {
+			"maintainer": "NGINX Docker Maintainers \u003cdocker-maint@nginx.com\u003e"
+		},
+		"StopSignal": "SIGQUIT"
+	},
+	"Architecture": "amd64",
+	"Os": "linux",
+	"Size": 192231837,
+	"VirtualSize": 192231837,
+	"GraphDriver": {
+		"Data": {
+			"LowerDir": "/var/lib/docker/overlay2/17705dc7058ea7f1900a37157f5ab2a66b60b2fa2055b3a0bd0084954f404c0e/diff:/var/lib/docker/overlay2/779807f344b079aec6f8fa80b60c84f15742c90f31c128d418995a5a04c1092d/diff:/var/lib/docker/overlay2/ebea50551f71507cc5cfdfeea9b5ca2bbbb3c8208cd3e1ab67b909a7f5290ea7/diff:/var/lib/docker/overlay2/2f45ae231232a6a4b299c721350be8a2152d2226a6a20b573392552bb2ac7c5d/diff:/var/lib/docker/overlay2/e2d624f793a74bbb803333a1d4ffa693713330730e7d77c27085f486ee411fd2/diff:/var/lib/docker/overlay2/96ad63618fd84e5892cb1e6b126ad697628a9f973315c34f2ebcf7ac4ec54cd3/diff",
+			"MergedDir": "/var/lib/docker/overlay2/b1447a185d2eabad75290be1d6adf4e363538d0e3a52b07f8f3db9539f4afb90/merged",
+			"UpperDir": "/var/lib/docker/overlay2/b1447a185d2eabad75290be1d6adf4e363538d0e3a52b07f8f3db9539f4afb90/diff",
+			"WorkDir": "/var/lib/docker/overlay2/b1447a185d2eabad75290be1d6adf4e363538d0e3a52b07f8f3db9539f4afb90/work"
+		},
+		"Name": "overlay2"
+	},
+	"RootFS": {
+		"Type": "layers",
+		"Layers": [
+			"sha256:7cc7fe68eff66f19872441a51938eecc4ad33746d2baa3abc081c1e6fe25988e",
+			"sha256:30837a0774b97fd5fd6306e4a67b9dba10fff174d82f0e7d2c6104dc79716fc3",
+			"sha256:a6b19c3d00b104e9f5ae798917606b4706bf27748a008a5b44211b801ede45d8",
+			"sha256:6b1b97dc92853f9880a37c378d2fe582eaca6567f3962d6d69dcbf35f65d95f9",
+			"sha256:5c91a024d899eb09709296029b21f98722fa446ac7e37bb85b36f6484c499a2e",
+			"sha256:0662742b23b26cd3b0c231ac4003d7343e3df50c62765b0baf6336c58156fa76",
+			"sha256:f17478b6e8f3dcfdeb55c9e82529529ff6a984b3f72daa2fd723435f9ee9f93f"
+		]
+	},
+	"Metadata": {
+		"LastTagTime": "0001-01-01T00:00:00Z"
+	}
+}: timestamp=2025-08-07T07:57:26.907Z
+2025-08-07T07:57:26.907Z [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/08/07 07:57:26 [DEBUG] found local image via imageName: nginx:latest: timestamp=2025-08-07T07:57:26.907Z
+2025-08-07T07:57:26.911Z [DEBUG] ReferenceTransformer: "docker_container.nginx_container" references: []
+2025-08-07T07:57:26.919Z [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/08/07 07:57:26 [INFO] Waiting for container: 'd0061167aa0156a6d974950a60a046fd8aa287ecc54efcba890320d796dcd78f' to run: max '15 seconds': timestamp=2025-08-07T07:57:26.919Z
+2025-08-07T07:57:26.920Z [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/08/07 07:57:26 [DEBUG] Waiting for state to become: [running]: timestamp=2025-08-07T07:57:26.920Z
+2025-08-07T07:57:27.023Z [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/08/07 07:57:27 [DEBUG] Docker container inspect: {
+	"Id": "d0061167aa0156a6d974950a60a046fd8aa287ecc54efcba890320d796dcd78f",
+	"Created": "2025-08-07T07:57:10.568682445Z",
+	"Path": "/docker-entrypoint.sh",
+	"Args": [
+		"nginx",
+		"-g",
+		"daemon off;"
+	],
+	"State": {
+		"Status": "running",
+		"Running": true,
+		"Paused": false,
+		"Restarting": false,
+		"OOMKilled": false,
+		"Dead": false,
+		"Pid": 3922,
+		"ExitCode": 0,
+		"Error": "",
+		"StartedAt": "2025-08-07T07:57:10.787125278Z",
+		"FinishedAt": "0001-01-01T00:00:00Z"
+	},
+	"Image": "sha256:2cd1d97f893f70cee86a38b7160c30e5750f3ed6ad86c598884ca9c6a563a501",
+	"ResolvConfPath": "/var/lib/docker/containers/d0061167aa0156a6d974950a60a046fd8aa287ecc54efcba890320d796dcd78f/resolv.conf",
+	"HostnamePath": "/var/lib/docker/containers/d0061167aa0156a6d974950a60a046fd8aa287ecc54efcba890320d796dcd78f/hostname",
+	"HostsPath": "/var/lib/docker/containers/d0061167aa0156a6d974950a60a046fd8aa287ecc54efcba890320d796dcd78f/hosts",
+	"LogPath": "/var/lib/docker/containers/d0061167aa0156a6d974950a60a046fd8aa287ecc54efcba890320d796dcd78f/d0061167aa0156a6d974950a60a046fd8aa287ecc54efcba890320d796dcd78f-json.log",
+	"Name": "/nginx-task3",
+	"RestartCount": 0,
+	"Driver": "overlay2",
+	"Platform": "linux",
+	"MountLabel": "",
+	"ProcessLabel": "",
+	"AppArmorProfile": "docker-default",
+	"ExecIDs": null,
+	"HostConfig": {
+		"Binds": null,
+		"ContainerIDFile": "",
+		"LogConfig": {
+			"Type": "json-file",
+			"Config": {}
+		},
+		"NetworkMode": "bridge",
+		"PortBindings": {
+			"80/tcp": [
+				{
+					"HostIp": "0.0.0.0",
+					"HostPort": "8080"
+				}
+			]
+		},
+		"RestartPolicy": {
+			"Name": "no",
+			"MaximumRetryCount": 0
+		},
+		"AutoRemove": false,
+		"VolumeDriver": "",
+		"VolumesFrom": null,
+		"CapAdd": null,
+		"CapDrop": null,
+		"CgroupnsMode": "private",
+		"Dns": null,
+		"DnsOptions": null,
+		"DnsSearch": null,
+		"ExtraHosts": null,
+		"GroupAdd": null,
+		"IpcMode": "private",
+		"Cgroup": "",
+		"Links": null,
+		"OomScoreAdj": 0,
+		"PidMode": "",
+		"Privileged": false,
+		"PublishAllPorts": false,
+		"ReadonlyRootfs": false,
+		"SecurityOpt": null,
+		"UTSMode": "",
+		"UsernsMode": "",
+		"ShmSize": 67108864,
+		"Runtime": "runc",
+		"ConsoleSize": [
+			0,
+			0
+		],
+		"Isolation": "",
+		"CpuShares": 0,
+		"Memory": 0,
+		"NanoCpus": 0,
+		"CgroupParent": "",
+		"BlkioWeight": 0,
+		"BlkioWeightDevice": null,
+		"BlkioDeviceReadBps": null,
+		"BlkioDeviceWriteBps": null,
+		"BlkioDeviceReadIOps": null,
+		"BlkioDeviceWriteIOps": null,
+		"CpuPeriod": 0,
+		"CpuQuota": 0,
+		"CpuRealtimePeriod": 0,
+		"CpuRealtimeRuntime": 0,
+		"CpusetCpus": "",
+		"CpusetMems": "",
+		"Devices": null,
+		"DeviceCgroupRules": null,
+		"DeviceRequests": null,
+		"KernelMemory": 0,
+		"KernelMemoryTCP": 0,
+		"MemoryReservation": 0,
+		"MemorySwap": 0,
+		"MemorySwappiness": null,
+		"OomKillDisable": null,
+		"PidsLimit": null,
+		"Ulimits": null,
+		"CpuCount": 0,
+		"CpuPercent": 0,
+		"IOMaximumIOps": 0,
+		"IOMaximumBandwidth": 0,
+		"MaskedPaths": [
+			"/proc/asound",
+			"/proc/acpi",
+			"/proc/interrupts",
+			"/proc/kcore",
+			"/proc/keys",
+			"/proc/latency_stats",
+			"/proc/timer_list",
+			"/proc/timer_stats",
+			"/proc/sched_debug",
+			"/proc/scsi",
+			"/sys/firmware",
+			"/sys/devices/virtual/powercap"
+		],
+		"ReadonlyPaths": [
+			"/proc/bus",
+			"/proc/fs",
+			"/proc/irq",
+			"/proc/sys",
+			"/proc/sysrq-trigger"
+		],
+		"Init": false
+	},
+	"GraphDriver": {
+		"Data": {
+			"ID": "d0061167aa0156a6d974950a60a046fd8aa287ecc54efcba890320d796dcd78f",
+			"LowerDir": "/var/lib/docker/overlay2/f3c97faf4bc68116e906925741c8d28edf4e2d0feaf46338e0ec612cfcd1b827-init/diff:/var/lib/docker/overlay2/b1447a185d2eabad75290be1d6adf4e363538d0e3a52b07f8f3db9539f4afb90/diff:/var/lib/docker/overlay2/17705dc7058ea7f1900a37157f5ab2a66b60b2fa2055b3a0bd0084954f404c0e/diff:/var/lib/docker/overlay2/779807f344b079aec6f8fa80b60c84f15742c90f31c128d418995a5a04c1092d/diff:/var/lib/docker/overlay2/ebea50551f71507cc5cfdfeea9b5ca2bbbb3c8208cd3e1ab67b909a7f5290ea7/diff:/var/lib/docker/overlay2/2f45ae231232a6a4b299c721350be8a2152d2226a6a20b573392552bb2ac7c5d/diff:/var/lib/docker/overlay2/e2d624f793a74bbb803333a1d4ffa693713330730e7d77c27085f486ee411fd2/diff:/var/lib/docker/overlay2/96ad63618fd84e5892cb1e6b126ad697628a9f973315c34f2ebcf7ac4ec54cd3/diff",
+			"MergedDir": "/var/lib/docker/overlay2/f3c97faf4bc68116e906925741c8d28edf4e2d0feaf46338e0ec612cfcd1b827/merged",
+			"UpperDir": "/var/lib/docker/overlay2/f3c97faf4bc68116e906925741c8d28edf4e2d0feaf46338e0ec612cfcd1b827/diff",
+			"WorkDir": "/var/lib/docker/overlay2/f3c97faf4bc68116e906925741c8d28edf4e2d0feaf46338e0ec612cfcd1b827/work"
+		},
+		"Name": "overlay2"
+	},
+	"Mounts": [],
+	"Config": {
+		"Hostname": "d0061167aa01",
+		"Domainname": "",
+		"User": "",
+		"AttachStdin": false,
+		"AttachStdout": false,
+		"AttachStderr": false,
+		"ExposedPorts": {
+			"80/tcp": {}
+		},
+		"Tty": false,
+		"OpenStdin": false,
+		"StdinOnce": false,
+		"Env": [
+			"PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+			"NGINX_VERSION=1.29.0",
+			"NJS_VERSION=0.9.0",
+			"NJS_RELEASE=1~bookworm",
+			"PKG_RELEASE=1~bookworm",
+			"DYNPKG_RELEASE=1~bookworm"
+		],
+		"Cmd": [
+			"nginx",
+			"-g",
+			"daemon off;"
+		],
+		"Image": "nginx:latest",
+		"Volumes": null,
+		"WorkingDir": "",
+		"Entrypoint": [
+			"/docker-entrypoint.sh"
+		],
+		"OnBuild": null,
+		"Labels": {
+			"maintainer": "NGINX Docker Maintainers \u003cdocker-maint@nginx.com\u003e"
+		},
+		"StopSignal": "SIGQUIT"
+	},
+	"NetworkSettings": {
+		"Bridge": "",
+		"SandboxID": "5172bc6d6d856ef084e31771c4a4379647c98d96db6244de00c83ffd40f58a14",
+		"HairpinMode": false,
+		"LinkLocalIPv6Address": "",
+		"LinkLocalIPv6PrefixLen": 0,
+		"Ports": {
+			"80/tcp": [
+				{
+					"HostIp": "0.0.0.0",
+					"HostPort": "8080"
+				}
+			]
+		},
+		"SandboxKey": "/var/run/docker/netns/5172bc6d6d85",
+		"SecondaryIPAddresses": null,
+		"SecondaryIPv6Addresses": null,
+		"EndpointID": "890bce5c6e6bbbb8f14643d8ad54e6496aa58ef94d3b4e38660e17ac9b86a7e6",
+		"Gateway": "172.17.0.1",
+		"GlobalIPv6Address": "",
+		"GlobalIPv6PrefixLen": 0,
+		"IPAddress": "172.17.0.2",
+		"IPPrefixLen": 16,
+		"IPv6Gateway": "",
+		"MacAddress": "22:12:d9:b3:13:8f",
+		"Networks": {
+			"bridge": {
+				"IPAMConfig": null,
+				"Links": null,
+				"Aliases": null,
+				"NetworkID": "e102c2fd80d7bfaaedda3270542761e72eeb76fa11be9d16162fd3b9eecf394e",
+				"EndpointID": "890bce5c6e6bbbb8f14643d8ad54e6496aa58ef94d3b4e38660e17ac9b86a7e6",
+				"Gateway": "172.17.0.1",
+				"IPAddress": "172.17.0.2",
+				"IPPrefixLen": 16,
+				"IPv6Gateway": "",
+				"GlobalIPv6Address": "",
+				"GlobalIPv6PrefixLen": 0,
+				"MacAddress": "22:12:d9:b3:13:8f",
+				"DriverOpts": null
+			}
+		}
+	}
+}: timestamp=2025-08-07T07:57:27.021Z
+2025-08-07T07:57:27.023Z [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/08/07 07:57:27 [DEBUG] Container d0061167aa0156a6d974950a60a046fd8aa287ecc54efcba890320d796dcd78f is running: true: timestamp=2025-08-07T07:57:27.021Z
+2025-08-07T07:57:27.023Z [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/08/07 07:57:27 [DEBUG] Docker container inspect from stateFunc: {
+	"Id": "d0061167aa0156a6d974950a60a046fd8aa287ecc54efcba890320d796dcd78f",
+	"Created": "2025-08-07T07:57:10.568682445Z",
+	"Path": "/docker-entrypoint.sh",
+	"Args": [
+		"nginx",
+		"-g",
+		"daemon off;"
+	],
+	"State": {
+		"Status": "running",
+		"Running": true,
+		"Paused": false,
+		"Restarting": false,
+		"OOMKilled": false,
+		"Dead": false,
+		"Pid": 3922,
+		"ExitCode": 0,
+		"Error": "",
+		"StartedAt": "2025-08-07T07:57:10.787125278Z",
+		"FinishedAt": "0001-01-01T00:00:00Z"
+	},
+	"Image": "sha256:2cd1d97f893f70cee86a38b7160c30e5750f3ed6ad86c598884ca9c6a563a501",
+	"ResolvConfPath": "/var/lib/docker/containers/d0061167aa0156a6d974950a60a046fd8aa287ecc54efcba890320d796dcd78f/resolv.conf",
+	"HostnamePath": "/var/lib/docker/containers/d0061167aa0156a6d974950a60a046fd8aa287ecc54efcba890320d796dcd78f/hostname",
+	"HostsPath": "/var/lib/docker/containers/d0061167aa0156a6d974950a60a046fd8aa287ecc54efcba890320d796dcd78f/hosts",
+	"LogPath": "/var/lib/docker/containers/d0061167aa0156a6d974950a60a046fd8aa287ecc54efcba890320d796dcd78f/d0061167aa0156a6d974950a60a046fd8aa287ecc54efcba890320d796dcd78f-json.log",
+	"Name": "/nginx-task3",
+	"RestartCount": 0,
+	"Driver": "overlay2",
+	"Platform": "linux",
+	"MountLabel": "",
+	"ProcessLabel": "",
+	"AppArmorProfile": "docker-default",
+	"ExecIDs": null,
+	"HostConfig": {
+		"Binds": null,
+		"ContainerIDFile": "",
+		"LogConfig": {
+			"Type": "json-file",
+			"Config": {}
+		},
+		"NetworkMode": "bridge",
+		"PortBindings": {
+			"80/tcp": [
+				{
+					"HostIp": "0.0.0.0",
+					"HostPort": "8080"
+				}
+			]
+		},
+		"RestartPolicy": {
+			"Name": "no",
+			"MaximumRetryCount": 0
+		},
+		"AutoRemove": false,
+		"VolumeDriver": "",
+		"VolumesFrom": null,
+		"CapAdd": null,
+		"CapDrop": null,
+		"CgroupnsMode": "private",
+		"Dns": null,
+		"DnsOptions": null,
+		"DnsSearch": null,
+		"ExtraHosts": null,
+		"GroupAdd": null,
+		"IpcMode": "private",
+		"Cgroup": "",
+		"Links": null,
+		"OomScoreAdj": 0,
+		"PidMode": "",
+		"Privileged": false,
+		"PublishAllPorts": false,
+		"ReadonlyRootfs": false,
+		"SecurityOpt": null,
+		"UTSMode": "",
+		"UsernsMode": "",
+		"ShmSize": 67108864,
+		"Runtime": "runc",
+		"ConsoleSize": [
+			0,
+			0
+		],
+		"Isolation": "",
+		"CpuShares": 0,
+		"Memory": 0,
+		"NanoCpus": 0,
+		"CgroupParent": "",
+		"BlkioWeight": 0,
+		"BlkioWeightDevice": null,
+		"BlkioDeviceReadBps": null,
+		"BlkioDeviceWriteBps": null,
+		"BlkioDeviceReadIOps": null,
+		"BlkioDeviceWriteIOps": null,
+		"CpuPeriod": 0,
+		"CpuQuota": 0,
+		"CpuRealtimePeriod": 0,
+		"CpuRealtimeRuntime": 0,
+		"CpusetCpus": "",
+		"CpusetMems": "",
+		"Devices": null,
+		"DeviceCgroupRules": null,
+		"DeviceRequests": null,
+		"KernelMemory": 0,
+		"KernelMemoryTCP": 0,
+		"MemoryReservation": 0,
+		"MemorySwap": 0,
+		"MemorySwappiness": null,
+		"OomKillDisable": null,
+		"PidsLimit": null,
+		"Ulimits": null,
+		"CpuCount": 0,
+		"CpuPercent": 0,
+		"IOMaximumIOps": 0,
+		"IOMaximumBandwidth": 0,
+		"MaskedPaths": [
+			"/proc/asound",
+			"/proc/acpi",
+			"/proc/interrupts",
+			"/proc/kcore",
+			"/proc/keys",
+			"/proc/latency_stats",
+			"/proc/timer_list",
+			"/proc/timer_stats",
+			"/proc/sched_debug",
+			"/proc/scsi",
+			"/sys/firmware",
+			"/sys/devices/virtual/powercap"
+		],
+		"ReadonlyPaths": [
+			"/proc/bus",
+			"/proc/fs",
+			"/proc/irq",
+			"/proc/sys",
+			"/proc/sysrq-trigger"
+		],
+		"Init": false
+	},
+	"GraphDriver": {
+		"Data": {
+			"ID": "d0061167aa0156a6d974950a60a046fd8aa287ecc54efcba890320d796dcd78f",
+			"LowerDir": "/var/lib/docker/overlay2/f3c97faf4bc68116e906925741c8d28edf4e2d0feaf46338e0ec612cfcd1b827-init/diff:/var/lib/docker/overlay2/b1447a185d2eabad75290be1d6adf4e363538d0e3a52b07f8f3db9539f4afb90/diff:/var/lib/docker/overlay2/17705dc7058ea7f1900a37157f5ab2a66b60b2fa2055b3a0bd0084954f404c0e/diff:/var/lib/docker/overlay2/779807f344b079aec6f8fa80b60c84f15742c90f31c128d418995a5a04c1092d/diff:/var/lib/docker/overlay2/ebea50551f71507cc5cfdfeea9b5ca2bbbb3c8208cd3e1ab67b909a7f5290ea7/diff:/var/lib/docker/overlay2/2f45ae231232a6a4b299c721350be8a2152d2226a6a20b573392552bb2ac7c5d/diff:/var/lib/docker/overlay2/e2d624f793a74bbb803333a1d4ffa693713330730e7d77c27085f486ee411fd2/diff:/var/lib/docker/overlay2/96ad63618fd84e5892cb1e6b126ad697628a9f973315c34f2ebcf7ac4ec54cd3/diff",
+			"MergedDir": "/var/lib/docker/overlay2/f3c97faf4bc68116e906925741c8d28edf4e2d0feaf46338e0ec612cfcd1b827/merged",
+			"UpperDir": "/var/lib/docker/overlay2/f3c97faf4bc68116e906925741c8d28edf4e2d0feaf46338e0ec612cfcd1b827/diff",
+			"WorkDir": "/var/lib/docker/overlay2/f3c97faf4bc68116e906925741c8d28edf4e2d0feaf46338e0ec612cfcd1b827/work"
+		},
+		"Name": "overlay2"
+	},
+	"Mounts": [],
+	"Config": {
+		"Hostname": "d0061167aa01",
+		"Domainname": "",
+		"User": "",
+		"AttachStdin": false,
+		"AttachStdout": false,
+		"AttachStderr": false,
+		"ExposedPorts": {
+			"80/tcp": {}
+		},
+		"Tty": false,
+		"OpenStdin": false,
+		"StdinOnce": false,
+		"Env": [
+			"PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+			"NGINX_VERSION=1.29.0",
+			"NJS_VERSION=0.9.0",
+			"NJS_RELEASE=1~bookworm",
+			"PKG_RELEASE=1~bookworm",
+			"DYNPKG_RELEASE=1~bookworm"
+		],
+		"Cmd": [
+			"nginx",
+			"-g",
+			"daemon off;"
+		],
+		"Image": "nginx:latest",
+		"Volumes": null,
+		"WorkingDir": "",
+		"Entrypoint": [
+			"/docker-entrypoint.sh"
+		],
+		"OnBuild": null,
+		"Labels": {
+			"maintainer": "NGINX Docker Maintainers \u003cdocker-maint@nginx.com\u003e"
+		},
+		"StopSignal": "SIGQUIT"
+	},
+	"NetworkSettings": {
+		"Bridge": "",
+		"SandboxID": "5172bc6d6d856ef084e31771c4a4379647c98d96db6244de00c83ffd40f58a14",
+		"HairpinMode": false,
+		"LinkLocalIPv6Address": "",
+		"LinkLocalIPv6PrefixLen": 0,
+		"Ports": {
+			"80/tcp": [
+				{
+					"HostIp": "0.0.0.0",
+					"HostPort": "8080"
+				}
+			]
+		},
+		"SandboxKey": "/var/run/docker/netns/5172bc6d6d85",
+		"SecondaryIPAddresses": null,
+		"SecondaryIPv6Addresses": null,
+		"EndpointID": "890bce5c6e6bbbb8f14643d8ad54e6496aa58ef94d3b4e38660e17ac9b86a7e6",
+		"Gateway": "172.17.0.1",
+		"GlobalIPv6Address": "",
+		"GlobalIPv6PrefixLen": 0,
+		"IPAddress": "172.17.0.2",
+		"IPPrefixLen": 16,
+		"IPv6Gateway": "",
+		"MacAddress": "22:12:d9:b3:13:8f",
+		"Networks": {
+			"bridge": {
+				"IPAMConfig": null,
+				"Links": null,
+				"Aliases": null,
+				"NetworkID": "e102c2fd80d7bfaaedda3270542761e72eeb76fa11be9d16162fd3b9eecf394e",
+				"EndpointID": "890bce5c6e6bbbb8f14643d8ad54e6496aa58ef94d3b4e38660e17ac9b86a7e6",
+				"Gateway": "172.17.0.1",
+				"IPAddress": "172.17.0.2",
+				"IPPrefixLen": 16,
+				"IPv6Gateway": "",
+				"GlobalIPv6Address": "",
+				"GlobalIPv6PrefixLen": 0,
+				"MacAddress": "22:12:d9:b3:13:8f",
+				"DriverOpts": null
+			}
+		}
+	}
+}: timestamp=2025-08-07T07:57:27.021Z
+2025-08-07T07:57:27.033Z [WARN]  Provider "registry.terraform.io/kreuzwerker/docker" produced an invalid plan for docker_container.nginx_container, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .max_retry_count: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .memory_swap: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .publish_all_ports: planned value cty.False for a non-computed attribute
+      - .memory: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .read_only: planned value cty.False for a non-computed attribute
+      - .tmpfs: planned value cty.MapValEmpty(cty.String) for a non-computed attribute
+      - .wait: planned value cty.False for a non-computed attribute
+      - .cpu_set: planned value cty.StringVal("") for a non-computed attribute
+      - .group_add: planned value cty.SetValEmpty(cty.String) for a non-computed attribute
+      - .must_run: planned value cty.True for a non-computed attribute
+      - .privileged: planned value cty.False for a non-computed attribute
+      - .user: planned value cty.StringVal("") for a non-computed attribute
+      - .pid_mode: planned value cty.StringVal("") for a non-computed attribute
+      - .start: planned value cty.True for a non-computed attribute
+      - .tty: planned value cty.False for a non-computed attribute
+      - .wait_timeout: planned value cty.NumberIntVal(60) for a non-computed attribute
+      - .logs: planned value cty.False for a non-computed attribute
+      - .remove_volumes: planned value cty.True for a non-computed attribute
+      - .restart: planned value cty.StringVal("no") for a non-computed attribute
+      - .stdin_open: planned value cty.False for a non-computed attribute
+      - .sysctls: planned value cty.MapValEmpty(cty.String) for a non-computed attribute
+      - .userns_mode: planned value cty.StringVal("") for a non-computed attribute
+      - .cpu_shares: planned value cty.NumberIntVal(0) for a non-computed attribute
+      - .dns_opts: planned value cty.SetValEmpty(cty.String) for a non-computed attribute
+      - .domainname: planned value cty.StringVal("") for a non-computed attribute
+      - .rm: planned value cty.False for a non-computed attribute
+      - .attach: planned value cty.False for a non-computed attribute
+      - .container_read_refresh_timeout_milliseconds: planned value cty.NumberIntVal(15000) for a non-computed attribute
+      - .storage_opts: planned value cty.MapValEmpty(cty.String) for a non-computed attribute
+      - .working_dir: planned value cty.StringVal("") for a non-computed attribute
+      - .dns: planned value cty.SetValEmpty(cty.String) for a non-computed attribute
+      - .dns_search: planned value cty.SetValEmpty(cty.String) for a non-computed attribute
+      - .log_opts: planned value cty.MapValEmpty(cty.String) for a non-computed attribute
+      - .ports[0].ip: planned value cty.StringVal("0.0.0.0") for a non-computed attribute
+      - .ports[0].protocol: planned value cty.StringVal("tcp") for a non-computed attribute
+2025-08-07T07:57:27.036Z [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/08/07 07:57:27 [DEBUG] suppress diff ports: old and new don't have the same length: timestamp=2025-08-07T07:57:27.035Z
+2025-08-07T07:57:27.036Z [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/08/07 07:57:27 [DEBUG] suppress diff ports: old and new don't have the same length: timestamp=2025-08-07T07:57:27.035Z
+2025-08-07T07:57:27.036Z [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/08/07 07:57:27 [DEBUG] suppress diff ports: old and new don't have the same length: timestamp=2025-08-07T07:57:27.035Z
+2025-08-07T07:57:27.036Z [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/08/07 07:57:27 [DEBUG] suppress diff ports: old and new don't have the same length: timestamp=2025-08-07T07:57:27.035Z
+2025-08-07T07:57:27.036Z [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/08/07 07:57:27 [DEBUG] suppress diff ports: old and new don't have the same length: timestamp=2025-08-07T07:57:27.035Z
+2025-08-07T07:57:27.041Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2025-08-07T07:57:27.042Z [INFO]  provider: plugin process exited: plugin=.terraform/providers/registry.terraform.io/kreuzwerker/docker/3.0.2/linux_amd64/terraform-provider-docker_v3.0.2 id=4010
+2025-08-07T07:57:27.042Z [DEBUG] provider: plugin exited
+2025-08-07T07:57:27.043Z [DEBUG] building apply graph to check for errors
+2025-08-07T07:57:27.043Z [DEBUG] ProviderTransformer: "docker_container.nginx_container (destroy)" (*terraform.NodeDestroyResourceInstance) needs provider["registry.terraform.io/kreuzwerker/docker"]
+2025-08-07T07:57:27.043Z [DEBUG] ProviderTransformer: "docker_container.nginx_container (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/kreuzwerker/docker"]
+2025-08-07T07:57:27.043Z [DEBUG] ProviderTransformer: "docker_image.nginx (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/kreuzwerker/docker"]
+2025-08-07T07:57:27.043Z [DEBUG] ProviderTransformer: "docker_container.nginx_container" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/kreuzwerker/docker"]
+2025-08-07T07:57:27.044Z [DEBUG] ReferenceTransformer: "docker_container.nginx_container (expand)" references: [docker_image.nginx (expand)]
+2025-08-07T07:57:27.044Z [DEBUG] ReferenceTransformer: "docker_image.nginx (expand)" references: []
+2025-08-07T07:57:27.044Z [DEBUG] ReferenceTransformer: "docker_container.nginx_container" references: [docker_image.nginx (expand)]
+2025-08-07T07:57:27.044Z [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/kreuzwerker/docker\"]" references: []
+2025-08-07T07:57:27.050Z [DEBUG] command: asking for input: "\nDo you want to perform these actions?"
+2025-08-07T07:57:29.173Z [INFO]  backend/local: apply calling Apply
+2025-08-07T07:57:29.173Z [DEBUG] Building and walking apply graph for NormalMode plan
+2025-08-07T07:57:29.174Z [DEBUG] ProviderTransformer: "docker_image.nginx (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/kreuzwerker/docker"]
+2025-08-07T07:57:29.174Z [DEBUG] ProviderTransformer: "docker_container.nginx_container (expand)" (*terraform.nodeExpandApplyableResource) needs provider["registry.terraform.io/kreuzwerker/docker"]
+2025-08-07T07:57:29.174Z [DEBUG] ProviderTransformer: "docker_container.nginx_container" (*terraform.NodeApplyableResourceInstance) needs provider["registry.terraform.io/kreuzwerker/docker"]
+2025-08-07T07:57:29.174Z [DEBUG] ProviderTransformer: "docker_container.nginx_container (destroy)" (*terraform.NodeDestroyResourceInstance) needs provider["registry.terraform.io/kreuzwerker/docker"]
+2025-08-07T07:57:29.174Z [DEBUG] ReferenceTransformer: "docker_image.nginx (expand)" references: []
+2025-08-07T07:57:29.174Z [DEBUG] ReferenceTransformer: "docker_container.nginx_container (expand)" references: [docker_image.nginx (expand)]
+2025-08-07T07:57:29.174Z [DEBUG] ReferenceTransformer: "docker_container.nginx_container" references: [docker_image.nginx (expand)]
+2025-08-07T07:57:29.174Z [DEBUG] ReferenceTransformer: "provider[\"registry.terraform.io/kreuzwerker/docker\"]" references: []
+2025-08-07T07:57:29.175Z [DEBUG] Starting graph walk: walkApply
+2025-08-07T07:57:29.175Z [DEBUG] created provider logger: level=debug
+2025-08-07T07:57:29.175Z [INFO]  provider: configuring client automatic mTLS
+2025-08-07T07:57:29.181Z [DEBUG] provider: starting plugin: path=.terraform/providers/registry.terraform.io/kreuzwerker/docker/3.0.2/linux_amd64/terraform-provider-docker_v3.0.2 args=[".terraform/providers/registry.terraform.io/kreuzwerker/docker/3.0.2/linux_amd64/terraform-provider-docker_v3.0.2"]
+2025-08-07T07:57:29.181Z [DEBUG] provider: plugin started: path=.terraform/providers/registry.terraform.io/kreuzwerker/docker/3.0.2/linux_amd64/terraform-provider-docker_v3.0.2 pid=4015
+2025-08-07T07:57:29.181Z [DEBUG] provider: waiting for RPC address: plugin=.terraform/providers/registry.terraform.io/kreuzwerker/docker/3.0.2/linux_amd64/terraform-provider-docker_v3.0.2
+2025-08-07T07:57:29.193Z [INFO]  provider.terraform-provider-docker_v3.0.2: configuring server automatic mTLS: timestamp=2025-08-07T07:57:29.192Z
+2025-08-07T07:57:29.216Z [DEBUG] provider: using plugin: version=5
+2025-08-07T07:57:29.216Z [DEBUG] provider.terraform-provider-docker_v3.0.2: plugin address: address=/tmp/plugin2302083796 network=unix timestamp=2025-08-07T07:57:29.215Z
+2025-08-07T07:57:29.244Z [WARN]  ValidateProviderConfig from "provider[\"registry.terraform.io/kreuzwerker/docker\"]" changed the config value, but that value is unused
+2025-08-07T07:57:29.252Z [INFO]  Starting apply for docker_container.nginx_container
+2025-08-07T07:57:29.252Z [DEBUG] docker_container.nginx_container: applying the planned Delete change
+2025-08-07T07:57:29.254Z [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/08/07 07:57:29 [INFO] Stopping Container 'd0061167aa0156a6d974950a60a046fd8aa287ecc54efcba890320d796dcd78f' with timeout 0s: timestamp=2025-08-07T07:57:29.254Z
+2025-08-07T07:57:29.415Z [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/08/07 07:57:29 [INFO] Removing Container 'd0061167aa0156a6d974950a60a046fd8aa287ecc54efcba890320d796dcd78f': timestamp=2025-08-07T07:57:29.415Z
+2025-08-07T07:57:29.432Z [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/08/07 07:57:29 [INFO] Waiting for Container 'd0061167aa0156a6d974950a60a046fd8aa287ecc54efcba890320d796dcd78f' with condition 'not-running': timestamp=2025-08-07T07:57:29.432Z
+2025-08-07T07:57:29.432Z [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/08/07 07:57:29 [INFO] Waiting for Container 'd0061167aa0156a6d974950a60a046fd8aa287ecc54efcba890320d796dcd78f' errord: 'Error response from daemon: No such container: d0061167aa0156a6d974950a60a046fd8aa287ecc54efcba890320d796dcd78f': timestamp=2025-08-07T07:57:29.432Z
+2025-08-07T07:57:29.439Z [DEBUG] State storage *statemgr.Filesystem declined to persist a state snapshot
+2025-08-07T07:57:29.442Z [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/08/07 07:57:29 [DEBUG] suppress diff ports: old and new don't have the same length: timestamp=2025-08-07T07:57:29.442Z
+2025-08-07T07:57:29.442Z [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/08/07 07:57:29 [DEBUG] suppress diff ports: old and new don't have the same length: timestamp=2025-08-07T07:57:29.442Z
+2025-08-07T07:57:29.442Z [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/08/07 07:57:29 [DEBUG] suppress diff ports: old and new don't have the same length: timestamp=2025-08-07T07:57:29.442Z
+2025-08-07T07:57:29.442Z [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/08/07 07:57:29 [DEBUG] suppress diff ports: old and new don't have the same length: timestamp=2025-08-07T07:57:29.442Z
+2025-08-07T07:57:29.442Z [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/08/07 07:57:29 [DEBUG] suppress diff ports: old and new don't have the same length: timestamp=2025-08-07T07:57:29.442Z
+2025-08-07T07:57:29.444Z [WARN]  Provider "registry.terraform.io/kreuzwerker/docker" produced an invalid plan for docker_container.nginx_container, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .wait_timeout: planned value cty.NumberIntVal(60) for a non-computed attribute
+      - .read_only: planned value cty.False for a non-computed attribute
+      - .container_read_refresh_timeout_milliseconds: planned value cty.NumberIntVal(15000) for a non-computed attribute
+      - .must_run: planned value cty.True for a non-computed attribute
+      - .tty: planned value cty.False for a non-computed attribute
+      - .restart: planned value cty.StringVal("no") for a non-computed attribute
+      - .wait: planned value cty.False for a non-computed attribute
+      - .logs: planned value cty.False for a non-computed attribute
+      - .remove_volumes: planned value cty.True for a non-computed attribute
+      - .start: planned value cty.True for a non-computed attribute
+      - .rm: planned value cty.False for a non-computed attribute
+      - .stdin_open: planned value cty.False for a non-computed attribute
+      - .attach: planned value cty.False for a non-computed attribute
+      - .ports[0].ip: planned value cty.StringVal("0.0.0.0") for a non-computed attribute
+      - .ports[0].protocol: planned value cty.StringVal("tcp") for a non-computed attribute
+      - .healthcheck: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+      - .labels: attribute representing nested block must not be unknown itself; set nested attribute values to unknown instead
+2025-08-07T07:57:29.445Z [INFO]  Starting apply for docker_container.nginx_container
+2025-08-07T07:57:29.445Z [DEBUG] docker_container.nginx_container: applying the planned Create change
+2025-08-07T07:57:29.447Z [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/08/07 07:57:29 [DEBUG] setting computed for "security_opts" from ComputedKeys: timestamp=2025-08-07T07:57:29.447Z
+2025-08-07T07:57:29.447Z [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/08/07 07:57:29 [DEBUG] suppress diff ports: old and new don't have the same length: timestamp=2025-08-07T07:57:29.447Z
+2025-08-07T07:57:29.447Z [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/08/07 07:57:29 [DEBUG] suppress diff ports: old and new don't have the same length: timestamp=2025-08-07T07:57:29.447Z
+2025-08-07T07:57:29.447Z [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/08/07 07:57:29 [DEBUG] suppress diff ports: old and new don't have the same length: timestamp=2025-08-07T07:57:29.447Z
+2025-08-07T07:57:29.448Z [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/08/07 07:57:29 [DEBUG] suppress diff ports: old and new don't have the same length: timestamp=2025-08-07T07:57:29.447Z
+2025-08-07T07:57:29.448Z [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/08/07 07:57:29 [DEBUG] suppress diff ports: old and new don't have the same length: timestamp=2025-08-07T07:57:29.447Z
+2025-08-07T07:57:29.448Z [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/08/07 07:57:29 [DEBUG] setting computed for "healthcheck" from ComputedKeys: timestamp=2025-08-07T07:57:29.447Z
+2025-08-07T07:57:29.448Z [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/08/07 07:57:29 [DEBUG] setting computed for "env" from ComputedKeys: timestamp=2025-08-07T07:57:29.447Z
+2025-08-07T07:57:29.448Z [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/08/07 07:57:29 [DEBUG] setting computed for "labels" from ComputedKeys: timestamp=2025-08-07T07:57:29.448Z
+2025-08-07T07:57:29.448Z [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/08/07 07:57:29 [DEBUG] setting computed for "command" from ComputedKeys: timestamp=2025-08-07T07:57:29.448Z
+2025-08-07T07:57:29.448Z [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/08/07 07:57:29 [DEBUG] setting computed for "entrypoint" from ComputedKeys: timestamp=2025-08-07T07:57:29.448Z
+2025-08-07T07:57:29.448Z [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/08/07 07:57:29 [DEBUG] setting computed for "network_data" from ComputedKeys: timestamp=2025-08-07T07:57:29.448Z
+2025-08-07T07:57:29.453Z [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/08/07 07:57:29 [DEBUG] Docker image inspect from readFunc: {
+	"Id": "sha256:2cd1d97f893f70cee86a38b7160c30e5750f3ed6ad86c598884ca9c6a563a501",
+	"RepoTags": [
+		"nginx:latest"
+	],
+	"RepoDigests": [
+		"nginx@sha256:84ec966e61a8c7846f509da7eb081c55c1d56817448728924a87ab32f12a72fb"
+	],
+	"Parent": "",
+	"Comment": "buildkit.dockerfile.v0",
+	"Created": "2025-07-14T22:07:26Z",
+	"Container": "",
+	"ContainerConfig": {
+		"Hostname": "",
+		"Domainname": "",
+		"User": "",
+		"AttachStdin": false,
+		"AttachStdout": false,
+		"AttachStderr": false,
+		"Tty": false,
+		"OpenStdin": false,
+		"StdinOnce": false,
+		"Env": null,
+		"Cmd": null,
+		"Image": "",
+		"Volumes": null,
+		"WorkingDir": "",
+		"Entrypoint": null,
+		"OnBuild": null,
+		"Labels": null
+	},
+	"DockerVersion": "",
+	"Author": "",
+	"Config": {
+		"Hostname": "",
+		"Domainname": "",
+		"User": "",
+		"AttachStdin": false,
+		"AttachStdout": false,
+		"AttachStderr": false,
+		"ExposedPorts": {
+			"80/tcp": {}
+		},
+		"Tty": false,
+		"OpenStdin": false,
+		"StdinOnce": false,
+		"Env": [
+			"PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+			"NGINX_VERSION=1.29.0",
+			"NJS_VERSION=0.9.0",
+			"NJS_RELEASE=1~bookworm",
+			"PKG_RELEASE=1~bookworm",
+			"DYNPKG_RELEASE=1~bookworm"
+		],
+		"Cmd": [
+			"nginx",
+			"-g",
+			"daemon off;"
+		],
+		"Image": "",
+		"Volumes": null,
+		"WorkingDir": "",
+		"Entrypoint": [
+			"/docker-entrypoint.sh"
+		],
+		"OnBuild": null,
+		"Labels": {
+			"maintainer": "NGINX Docker Maintainers \u003cdocker-maint@nginx.com\u003e"
+		},
+		"StopSignal": "SIGQUIT"
+	},
+	"Architecture": "amd64",
+	"Os": "linux",
+	"Size": 192231837,
+	"VirtualSize": 192231837,
+	"GraphDriver": {
+		"Data": {
+			"LowerDir": "/var/lib/docker/overlay2/17705dc7058ea7f1900a37157f5ab2a66b60b2fa2055b3a0bd0084954f404c0e/diff:/var/lib/docker/overlay2/779807f344b079aec6f8fa80b60c84f15742c90f31c128d418995a5a04c1092d/diff:/var/lib/docker/overlay2/ebea50551f71507cc5cfdfeea9b5ca2bbbb3c8208cd3e1ab67b909a7f5290ea7/diff:/var/lib/docker/overlay2/2f45ae231232a6a4b299c721350be8a2152d2226a6a20b573392552bb2ac7c5d/diff:/var/lib/docker/overlay2/e2d624f793a74bbb803333a1d4ffa693713330730e7d77c27085f486ee411fd2/diff:/var/lib/docker/overlay2/96ad63618fd84e5892cb1e6b126ad697628a9f973315c34f2ebcf7ac4ec54cd3/diff",
+			"MergedDir": "/var/lib/docker/overlay2/b1447a185d2eabad75290be1d6adf4e363538d0e3a52b07f8f3db9539f4afb90/merged",
+			"UpperDir": "/var/lib/docker/overlay2/b1447a185d2eabad75290be1d6adf4e363538d0e3a52b07f8f3db9539f4afb90/diff",
+			"WorkDir": "/var/lib/docker/overlay2/b1447a185d2eabad75290be1d6adf4e363538d0e3a52b07f8f3db9539f4afb90/work"
+		},
+		"Name": "overlay2"
+	},
+	"RootFS": {
+		"Type": "layers",
+		"Layers": [
+			"sha256:7cc7fe68eff66f19872441a51938eecc4ad33746d2baa3abc081c1e6fe25988e",
+			"sha256:30837a0774b97fd5fd6306e4a67b9dba10fff174d82f0e7d2c6104dc79716fc3",
+			"sha256:a6b19c3d00b104e9f5ae798917606b4706bf27748a008a5b44211b801ede45d8",
+			"sha256:6b1b97dc92853f9880a37c378d2fe582eaca6567f3962d6d69dcbf35f65d95f9",
+			"sha256:5c91a024d899eb09709296029b21f98722fa446ac7e37bb85b36f6484c499a2e",
+			"sha256:0662742b23b26cd3b0c231ac4003d7343e3df50c62765b0baf6336c58156fa76",
+			"sha256:f17478b6e8f3dcfdeb55c9e82529529ff6a984b3f72daa2fd723435f9ee9f93f"
+		]
+	},
+	"Metadata": {
+		"LastTagTime": "0001-01-01T00:00:00Z"
+	}
+}: timestamp=2025-08-07T07:57:29.452Z
+2025-08-07T07:57:29.453Z [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/08/07 07:57:29 [DEBUG] found local image via imageName: nginx:latest: timestamp=2025-08-07T07:57:29.452Z
+2025-08-07T07:57:29.510Z [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/08/07 07:57:29 [INFO] retContainer container.ContainerCreateCreatedBody{ID:"5ed4535c5583c142761c2b117246ba4398ac4f80f5214c201fadaf79f87b35c4", Warnings:[]string{}}: timestamp=2025-08-07T07:57:29.510Z
+2025-08-07T07:57:29.781Z [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/08/07 07:57:29 [INFO] Waiting for container: '5ed4535c5583c142761c2b117246ba4398ac4f80f5214c201fadaf79f87b35c4' to run: max '15 seconds': timestamp=2025-08-07T07:57:29.780Z
+2025-08-07T07:57:29.782Z [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/08/07 07:57:29 [DEBUG] Waiting for state to become: [running]: timestamp=2025-08-07T07:57:29.782Z
+2025-08-07T07:57:29.885Z [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/08/07 07:57:29 [DEBUG] Docker container inspect: {
+	"Id": "5ed4535c5583c142761c2b117246ba4398ac4f80f5214c201fadaf79f87b35c4",
+	"Created": "2025-08-07T07:57:29.454688923Z",
+	"Path": "/docker-entrypoint.sh",
+	"Args": [
+		"nginx",
+		"-g",
+		"daemon off;"
+	],
+	"State": {
+		"Status": "running",
+		"Running": true,
+		"Paused": false,
+		"Restarting": false,
+		"OOMKilled": false,
+		"Dead": false,
+		"Pid": 4113,
+		"ExitCode": 0,
+		"Error": "",
+		"StartedAt": "2025-08-07T07:57:29.525142348Z",
+		"FinishedAt": "0001-01-01T00:00:00Z"
+	},
+	"Image": "sha256:2cd1d97f893f70cee86a38b7160c30e5750f3ed6ad86c598884ca9c6a563a501",
+	"ResolvConfPath": "/var/lib/docker/containers/5ed4535c5583c142761c2b117246ba4398ac4f80f5214c201fadaf79f87b35c4/resolv.conf",
+	"HostnamePath": "/var/lib/docker/containers/5ed4535c5583c142761c2b117246ba4398ac4f80f5214c201fadaf79f87b35c4/hostname",
+	"HostsPath": "/var/lib/docker/containers/5ed4535c5583c142761c2b117246ba4398ac4f80f5214c201fadaf79f87b35c4/hosts",
+	"LogPath": "/var/lib/docker/containers/5ed4535c5583c142761c2b117246ba4398ac4f80f5214c201fadaf79f87b35c4/5ed4535c5583c142761c2b117246ba4398ac4f80f5214c201fadaf79f87b35c4-json.log",
+	"Name": "/nginx-task3",
+	"RestartCount": 0,
+	"Driver": "overlay2",
+	"Platform": "linux",
+	"MountLabel": "",
+	"ProcessLabel": "",
+	"AppArmorProfile": "docker-default",
+	"ExecIDs": null,
+	"HostConfig": {
+		"Binds": null,
+		"ContainerIDFile": "",
+		"LogConfig": {
+			"Type": "json-file",
+			"Config": {}
+		},
+		"NetworkMode": "bridge",
+		"PortBindings": {
+			"80/tcp": [
+				{
+					"HostIp": "0.0.0.0",
+					"HostPort": "8080"
+				}
+			]
+		},
+		"RestartPolicy": {
+			"Name": "no",
+			"MaximumRetryCount": 0
+		},
+		"AutoRemove": false,
+		"VolumeDriver": "",
+		"VolumesFrom": null,
+		"CapAdd": null,
+		"CapDrop": null,
+		"CgroupnsMode": "private",
+		"Dns": null,
+		"DnsOptions": null,
+		"DnsSearch": null,
+		"ExtraHosts": null,
+		"GroupAdd": null,
+		"IpcMode": "private",
+		"Cgroup": "",
+		"Links": null,
+		"OomScoreAdj": 0,
+		"PidMode": "",
+		"Privileged": false,
+		"PublishAllPorts": false,
+		"ReadonlyRootfs": false,
+		"SecurityOpt": null,
+		"UTSMode": "",
+		"UsernsMode": "",
+		"ShmSize": 67108864,
+		"Runtime": "runc",
+		"ConsoleSize": [
+			0,
+			0
+		],
+		"Isolation": "",
+		"CpuShares": 0,
+		"Memory": 0,
+		"NanoCpus": 0,
+		"CgroupParent": "",
+		"BlkioWeight": 0,
+		"BlkioWeightDevice": null,
+		"BlkioDeviceReadBps": null,
+		"BlkioDeviceWriteBps": null,
+		"BlkioDeviceReadIOps": null,
+		"BlkioDeviceWriteIOps": null,
+		"CpuPeriod": 0,
+		"CpuQuota": 0,
+		"CpuRealtimePeriod": 0,
+		"CpuRealtimeRuntime": 0,
+		"CpusetCpus": "",
+		"CpusetMems": "",
+		"Devices": null,
+		"DeviceCgroupRules": null,
+		"DeviceRequests": null,
+		"KernelMemory": 0,
+		"KernelMemoryTCP": 0,
+		"MemoryReservation": 0,
+		"MemorySwap": 0,
+		"MemorySwappiness": null,
+		"OomKillDisable": null,
+		"PidsLimit": null,
+		"Ulimits": null,
+		"CpuCount": 0,
+		"CpuPercent": 0,
+		"IOMaximumIOps": 0,
+		"IOMaximumBandwidth": 0,
+		"MaskedPaths": [
+			"/proc/asound",
+			"/proc/acpi",
+			"/proc/interrupts",
+			"/proc/kcore",
+			"/proc/keys",
+			"/proc/latency_stats",
+			"/proc/timer_list",
+			"/proc/timer_stats",
+			"/proc/sched_debug",
+			"/proc/scsi",
+			"/sys/firmware",
+			"/sys/devices/virtual/powercap"
+		],
+		"ReadonlyPaths": [
+			"/proc/bus",
+			"/proc/fs",
+			"/proc/irq",
+			"/proc/sys",
+			"/proc/sysrq-trigger"
+		],
+		"Init": false
+	},
+	"GraphDriver": {
+		"Data": {
+			"ID": "5ed4535c5583c142761c2b117246ba4398ac4f80f5214c201fadaf79f87b35c4",
+			"LowerDir": "/var/lib/docker/overlay2/1a1e8e49bee409578eb032cfff3a2762a4ef93cc243cbcfa3fbbe7689a3d7682-init/diff:/var/lib/docker/overlay2/b1447a185d2eabad75290be1d6adf4e363538d0e3a52b07f8f3db9539f4afb90/diff:/var/lib/docker/overlay2/17705dc7058ea7f1900a37157f5ab2a66b60b2fa2055b3a0bd0084954f404c0e/diff:/var/lib/docker/overlay2/779807f344b079aec6f8fa80b60c84f15742c90f31c128d418995a5a04c1092d/diff:/var/lib/docker/overlay2/ebea50551f71507cc5cfdfeea9b5ca2bbbb3c8208cd3e1ab67b909a7f5290ea7/diff:/var/lib/docker/overlay2/2f45ae231232a6a4b299c721350be8a2152d2226a6a20b573392552bb2ac7c5d/diff:/var/lib/docker/overlay2/e2d624f793a74bbb803333a1d4ffa693713330730e7d77c27085f486ee411fd2/diff:/var/lib/docker/overlay2/96ad63618fd84e5892cb1e6b126ad697628a9f973315c34f2ebcf7ac4ec54cd3/diff",
+			"MergedDir": "/var/lib/docker/overlay2/1a1e8e49bee409578eb032cfff3a2762a4ef93cc243cbcfa3fbbe7689a3d7682/merged",
+			"UpperDir": "/var/lib/docker/overlay2/1a1e8e49bee409578eb032cfff3a2762a4ef93cc243cbcfa3fbbe7689a3d7682/diff",
+			"WorkDir": "/var/lib/docker/overlay2/1a1e8e49bee409578eb032cfff3a2762a4ef93cc243cbcfa3fbbe7689a3d7682/work"
+		},
+		"Name": "overlay2"
+	},
+	"Mounts": [],
+	"Config": {
+		"Hostname": "5ed4535c5583",
+		"Domainname": "",
+		"User": "",
+		"AttachStdin": false,
+		"AttachStdout": false,
+		"AttachStderr": false,
+		"ExposedPorts": {
+			"80/tcp": {}
+		},
+		"Tty": false,
+		"OpenStdin": false,
+		"StdinOnce": false,
+		"Env": [
+			"PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+			"NGINX_VERSION=1.29.0",
+			"NJS_VERSION=0.9.0",
+			"NJS_RELEASE=1~bookworm",
+			"PKG_RELEASE=1~bookworm",
+			"DYNPKG_RELEASE=1~bookworm"
+		],
+		"Cmd": [
+			"nginx",
+			"-g",
+			"daemon off;"
+		],
+		"Image": "nginx:latest",
+		"Volumes": null,
+		"WorkingDir": "",
+		"Entrypoint": [
+			"/docker-entrypoint.sh"
+		],
+		"OnBuild": null,
+		"Labels": {
+			"maintainer": "NGINX Docker Maintainers \u003cdocker-maint@nginx.com\u003e"
+		},
+		"StopSignal": "SIGQUIT"
+	},
+	"NetworkSettings": {
+		"Bridge": "",
+		"SandboxID": "324446c239ce4f6a24a7846b27670200e890c983e951de30784d6e515b0807d4",
+		"HairpinMode": false,
+		"LinkLocalIPv6Address": "",
+		"LinkLocalIPv6PrefixLen": 0,
+		"Ports": {
+			"80/tcp": [
+				{
+					"HostIp": "0.0.0.0",
+					"HostPort": "8080"
+				}
+			]
+		},
+		"SandboxKey": "/var/run/docker/netns/324446c239ce",
+		"SecondaryIPAddresses": null,
+		"SecondaryIPv6Addresses": null,
+		"EndpointID": "01af290ed8c44e0209f1ab24b25a0ecbec50a380f866577d629067039ca4ec3c",
+		"Gateway": "172.17.0.1",
+		"GlobalIPv6Address": "",
+		"GlobalIPv6PrefixLen": 0,
+		"IPAddress": "172.17.0.2",
+		"IPPrefixLen": 16,
+		"IPv6Gateway": "",
+		"MacAddress": "ce:85:df:01:e8:0d",
+		"Networks": {
+			"bridge": {
+				"IPAMConfig": null,
+				"Links": null,
+				"Aliases": null,
+				"NetworkID": "e102c2fd80d7bfaaedda3270542761e72eeb76fa11be9d16162fd3b9eecf394e",
+				"EndpointID": "01af290ed8c44e0209f1ab24b25a0ecbec50a380f866577d629067039ca4ec3c",
+				"Gateway": "172.17.0.1",
+				"IPAddress": "172.17.0.2",
+				"IPPrefixLen": 16,
+				"IPv6Gateway": "",
+				"GlobalIPv6Address": "",
+				"GlobalIPv6PrefixLen": 0,
+				"MacAddress": "ce:85:df:01:e8:0d",
+				"DriverOpts": null
+			}
+		}
+	}
+}: timestamp=2025-08-07T07:57:29.883Z
+2025-08-07T07:57:29.885Z [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/08/07 07:57:29 [DEBUG] Container 5ed4535c5583c142761c2b117246ba4398ac4f80f5214c201fadaf79f87b35c4 is running: true: timestamp=2025-08-07T07:57:29.883Z
+2025-08-07T07:57:29.885Z [INFO]  provider.terraform-provider-docker_v3.0.2: 2025/08/07 07:57:29 [DEBUG] Docker container inspect from stateFunc: {
+	"Id": "5ed4535c5583c142761c2b117246ba4398ac4f80f5214c201fadaf79f87b35c4",
+	"Created": "2025-08-07T07:57:29.454688923Z",
+	"Path": "/docker-entrypoint.sh",
+	"Args": [
+		"nginx",
+		"-g",
+		"daemon off;"
+	],
+	"State": {
+		"Status": "running",
+		"Running": true,
+		"Paused": false,
+		"Restarting": false,
+		"OOMKilled": false,
+		"Dead": false,
+		"Pid": 4113,
+		"ExitCode": 0,
+		"Error": "",
+		"StartedAt": "2025-08-07T07:57:29.525142348Z",
+		"FinishedAt": "0001-01-01T00:00:00Z"
+	},
+	"Image": "sha256:2cd1d97f893f70cee86a38b7160c30e5750f3ed6ad86c598884ca9c6a563a501",
+	"ResolvConfPath": "/var/lib/docker/containers/5ed4535c5583c142761c2b117246ba4398ac4f80f5214c201fadaf79f87b35c4/resolv.conf",
+	"HostnamePath": "/var/lib/docker/containers/5ed4535c5583c142761c2b117246ba4398ac4f80f5214c201fadaf79f87b35c4/hostname",
+	"HostsPath": "/var/lib/docker/containers/5ed4535c5583c142761c2b117246ba4398ac4f80f5214c201fadaf79f87b35c4/hosts",
+	"LogPath": "/var/lib/docker/containers/5ed4535c5583c142761c2b117246ba4398ac4f80f5214c201fadaf79f87b35c4/5ed4535c5583c142761c2b117246ba4398ac4f80f5214c201fadaf79f87b35c4-json.log",
+	"Name": "/nginx-task3",
+	"RestartCount": 0,
+	"Driver": "overlay2",
+	"Platform": "linux",
+	"MountLabel": "",
+	"ProcessLabel": "",
+	"AppArmorProfile": "docker-default",
+	"ExecIDs": null,
+	"HostConfig": {
+		"Binds": null,
+		"ContainerIDFile": "",
+		"LogConfig": {
+			"Type": "json-file",
+			"Config": {}
+		},
+		"NetworkMode": "bridge",
+		"PortBindings": {
+			"80/tcp": [
+				{
+					"HostIp": "0.0.0.0",
+					"HostPort": "8080"
+				}
+			]
+		},
+		"RestartPolicy": {
+			"Name": "no",
+			"MaximumRetryCount": 0
+		},
+		"AutoRemove": false,
+		"VolumeDriver": "",
+		"VolumesFrom": null,
+		"CapAdd": null,
+		"CapDrop": null,
+		"CgroupnsMode": "private",
+		"Dns": null,
+		"DnsOptions": null,
+		"DnsSearch": null,
+		"ExtraHosts": null,
+		"GroupAdd": null,
+		"IpcMode": "private",
+		"Cgroup": "",
+		"Links": null,
+		"OomScoreAdj": 0,
+		"PidMode": "",
+		"Privileged": false,
+		"PublishAllPorts": false,
+		"ReadonlyRootfs": false,
+		"SecurityOpt": null,
+		"UTSMode": "",
+		"UsernsMode": "",
+		"ShmSize": 67108864,
+		"Runtime": "runc",
+		"ConsoleSize": [
+			0,
+			0
+		],
+		"Isolation": "",
+		"CpuShares": 0,
+		"Memory": 0,
+		"NanoCpus": 0,
+		"CgroupParent": "",
+		"BlkioWeight": 0,
+		"BlkioWeightDevice": null,
+		"BlkioDeviceReadBps": null,
+		"BlkioDeviceWriteBps": null,
+		"BlkioDeviceReadIOps": null,
+		"BlkioDeviceWriteIOps": null,
+		"CpuPeriod": 0,
+		"CpuQuota": 0,
+		"CpuRealtimePeriod": 0,
+		"CpuRealtimeRuntime": 0,
+		"CpusetCpus": "",
+		"CpusetMems": "",
+		"Devices": null,
+		"DeviceCgroupRules": null,
+		"DeviceRequests": null,
+		"KernelMemory": 0,
+		"KernelMemoryTCP": 0,
+		"MemoryReservation": 0,
+		"MemorySwap": 0,
+		"MemorySwappiness": null,
+		"OomKillDisable": null,
+		"PidsLimit": null,
+		"Ulimits": null,
+		"CpuCount": 0,
+		"CpuPercent": 0,
+		"IOMaximumIOps": 0,
+		"IOMaximumBandwidth": 0,
+		"MaskedPaths": [
+			"/proc/asound",
+			"/proc/acpi",
+			"/proc/interrupts",
+			"/proc/kcore",
+			"/proc/keys",
+			"/proc/latency_stats",
+			"/proc/timer_list",
+			"/proc/timer_stats",
+			"/proc/sched_debug",
+			"/proc/scsi",
+			"/sys/firmware",
+			"/sys/devices/virtual/powercap"
+		],
+		"ReadonlyPaths": [
+			"/proc/bus",
+			"/proc/fs",
+			"/proc/irq",
+			"/proc/sys",
+			"/proc/sysrq-trigger"
+		],
+		"Init": false
+	},
+	"GraphDriver": {
+		"Data": {
+			"ID": "5ed4535c5583c142761c2b117246ba4398ac4f80f5214c201fadaf79f87b35c4",
+			"LowerDir": "/var/lib/docker/overlay2/1a1e8e49bee409578eb032cfff3a2762a4ef93cc243cbcfa3fbbe7689a3d7682-init/diff:/var/lib/docker/overlay2/b1447a185d2eabad75290be1d6adf4e363538d0e3a52b07f8f3db9539f4afb90/diff:/var/lib/docker/overlay2/17705dc7058ea7f1900a37157f5ab2a66b60b2fa2055b3a0bd0084954f404c0e/diff:/var/lib/docker/overlay2/779807f344b079aec6f8fa80b60c84f15742c90f31c128d418995a5a04c1092d/diff:/var/lib/docker/overlay2/ebea50551f71507cc5cfdfeea9b5ca2bbbb3c8208cd3e1ab67b909a7f5290ea7/diff:/var/lib/docker/overlay2/2f45ae231232a6a4b299c721350be8a2152d2226a6a20b573392552bb2ac7c5d/diff:/var/lib/docker/overlay2/e2d624f793a74bbb803333a1d4ffa693713330730e7d77c27085f486ee411fd2/diff:/var/lib/docker/overlay2/96ad63618fd84e5892cb1e6b126ad697628a9f973315c34f2ebcf7ac4ec54cd3/diff",
+			"MergedDir": "/var/lib/docker/overlay2/1a1e8e49bee409578eb032cfff3a2762a4ef93cc243cbcfa3fbbe7689a3d7682/merged",
+			"UpperDir": "/var/lib/docker/overlay2/1a1e8e49bee409578eb032cfff3a2762a4ef93cc243cbcfa3fbbe7689a3d7682/diff",
+			"WorkDir": "/var/lib/docker/overlay2/1a1e8e49bee409578eb032cfff3a2762a4ef93cc243cbcfa3fbbe7689a3d7682/work"
+		},
+		"Name": "overlay2"
+	},
+	"Mounts": [],
+	"Config": {
+		"Hostname": "5ed4535c5583",
+		"Domainname": "",
+		"User": "",
+		"AttachStdin": false,
+		"AttachStdout": false,
+		"AttachStderr": false,
+		"ExposedPorts": {
+			"80/tcp": {}
+		},
+		"Tty": false,
+		"OpenStdin": false,
+		"StdinOnce": false,
+		"Env": [
+			"PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+			"NGINX_VERSION=1.29.0",
+			"NJS_VERSION=0.9.0",
+			"NJS_RELEASE=1~bookworm",
+			"PKG_RELEASE=1~bookworm",
+			"DYNPKG_RELEASE=1~bookworm"
+		],
+		"Cmd": [
+			"nginx",
+			"-g",
+			"daemon off;"
+		],
+		"Image": "nginx:latest",
+		"Volumes": null,
+		"WorkingDir": "",
+		"Entrypoint": [
+			"/docker-entrypoint.sh"
+		],
+		"OnBuild": null,
+		"Labels": {
+			"maintainer": "NGINX Docker Maintainers \u003cdocker-maint@nginx.com\u003e"
+		},
+		"StopSignal": "SIGQUIT"
+	},
+	"NetworkSettings": {
+		"Bridge": "",
+		"SandboxID": "324446c239ce4f6a24a7846b27670200e890c983e951de30784d6e515b0807d4",
+		"HairpinMode": false,
+		"LinkLocalIPv6Address": "",
+		"LinkLocalIPv6PrefixLen": 0,
+		"Ports": {
+			"80/tcp": [
+				{
+					"HostIp": "0.0.0.0",
+					"HostPort": "8080"
+				}
+			]
+		},
+		"SandboxKey": "/var/run/docker/netns/324446c239ce",
+		"SecondaryIPAddresses": null,
+		"SecondaryIPv6Addresses": null,
+		"EndpointID": "01af290ed8c44e0209f1ab24b25a0ecbec50a380f866577d629067039ca4ec3c",
+		"Gateway": "172.17.0.1",
+		"GlobalIPv6Address": "",
+		"GlobalIPv6PrefixLen": 0,
+		"IPAddress": "172.17.0.2",
+		"IPPrefixLen": 16,
+		"IPv6Gateway": "",
+		"MacAddress": "ce:85:df:01:e8:0d",
+		"Networks": {
+			"bridge": {
+				"IPAMConfig": null,
+				"Links": null,
+				"Aliases": null,
+				"NetworkID": "e102c2fd80d7bfaaedda3270542761e72eeb76fa11be9d16162fd3b9eecf394e",
+				"EndpointID": "01af290ed8c44e0209f1ab24b25a0ecbec50a380f866577d629067039ca4ec3c",
+				"Gateway": "172.17.0.1",
+				"IPAddress": "172.17.0.2",
+				"IPPrefixLen": 16,
+				"IPv6Gateway": "",
+				"GlobalIPv6Address": "",
+				"GlobalIPv6PrefixLen": 0,
+				"MacAddress": "ce:85:df:01:e8:0d",
+				"DriverOpts": null
+			}
+		}
+	}
+}: timestamp=2025-08-07T07:57:29.884Z
+2025-08-07T07:57:29.885Z [WARN]  Provider "provider[\"registry.terraform.io/kreuzwerker/docker\"]" produced an unexpected new value for docker_container.nginx_container, but we are tolerating it because it is using the legacy plugin SDK.
+    The following problems may be the cause of any confusing errors from downstream operations:
+      - .publish_all_ports: was null, but now cty.False
+      - .cpu_set: was null, but now cty.StringVal("")
+      - .working_dir: was null, but now cty.StringVal("")
+      - .cpu_shares: was null, but now cty.NumberIntVal(0)
+      - .network_mode: was null, but now cty.StringVal("bridge")
+      - .privileged: was null, but now cty.False
+      - .domainname: was null, but now cty.StringVal("")
+      - .user: was null, but now cty.StringVal("")
+      - .userns_mode: was null, but now cty.StringVal("")
+      - .image: was cty.StringVal("nginx:latest"), but now cty.StringVal("sha256:2cd1d97f893f70cee86a38b7160c30e5750f3ed6ad86c598884ca9c6a563a501")
+      - .max_retry_count: was null, but now cty.NumberIntVal(0)
+      - .memory: was null, but now cty.NumberIntVal(0)
+      - .memory_swap: was null, but now cty.NumberIntVal(0)
+      - .pid_mode: was null, but now cty.StringVal("")
+2025-08-07T07:57:29.891Z [DEBUG] State storage *statemgr.Filesystem declined to persist a state snapshot
+2025-08-07T07:57:29.892Z [DEBUG] provider.stdio: received EOF, stopping recv loop: err="rpc error: code = Unavailable desc = error reading from server: EOF"
+2025-08-07T07:57:29.893Z [INFO]  provider: plugin process exited: plugin=.terraform/providers/registry.terraform.io/kreuzwerker/docker/3.0.2/linux_amd64/terraform-provider-docker_v3.0.2 id=4015
+2025-08-07T07:57:29.893Z [DEBUG] provider: plugin exited
