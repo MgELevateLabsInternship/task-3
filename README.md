@@ -25,3 +25,7 @@ terraform plan
 terraform apply
 docker ps
 terraform destroy
+```
+#### Output website
+
+<img width="1920" height="663" alt="Welcome to nginx! - Brave 07-08-2025 13_43_48" src="https://github.com/user-attachments/assets/8c8f2525-f970-4525-b0d8-53b790c9d6b8" />
